@@ -22,6 +22,12 @@ export class UserService {
 
     }
 
+    register(user:any): Observable<any>{
+        
+        //Peticion|Parametros|Envio de cabeceras
+        return this._http.post(this.url+'/register',user);
+    }
+
     signup(user: any): Observable<any> {
 
 

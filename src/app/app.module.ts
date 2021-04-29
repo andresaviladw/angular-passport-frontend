@@ -10,6 +10,7 @@ import { SecureComponent } from './RoleUser/secure/secure.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
+import { RegisterComponent } from './RoleUser/register/register.component';
 
 
 
@@ -17,7 +18,8 @@ import { UserService } from './services/user.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    SecureComponent
+    SecureComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

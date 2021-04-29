@@ -1,6 +1,6 @@
 <nav>
     <a routerLink="/login" *ngIf="!loggedIn">Login</a>
-    <a routerLink="/login" *ngIf="!loggedIn">Registrarse</a>
+    <a routerLink="/register" *ngIf="!loggedIn">Registrarse</a>
     <a routerLink="/logout" *ngIf="loggedIn" (click)="logout()">Logout</a>
 </nav>
 <router-outlet></router-outlet>

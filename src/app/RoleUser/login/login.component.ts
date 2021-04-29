@@ -17,14 +17,9 @@ export class LoginComponent implements OnInit {
 
   public user_data: any;
 
-  public valor='valor'
-
-  public activarCampo=true;
-
   constructor(
     private _userService: UserService,
-    private _router: Router,
-    private _route: ActivatedRoute
+    private _router: Router
   ) {
     this.page_title = 'Login';
 

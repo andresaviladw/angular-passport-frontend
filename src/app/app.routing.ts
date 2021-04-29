@@ -7,11 +7,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from './RoleUser/login/login.component';
 import { SecureComponent } from './RoleUser/secure/secure.component';
 import { AppComponent } from './app.component';
+import { RegisterComponent } from './RoleUser/register/register.component';
 
 
 const appRoutes: Routes=[
 
     {path: 'login',component: LoginComponent},
+    {path: 'register',component: RegisterComponent},
     {path: 'logout', component: LoginComponent},
     {path: 'secure',component: SecureComponent}
 
