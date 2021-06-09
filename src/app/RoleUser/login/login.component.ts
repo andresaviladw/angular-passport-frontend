@@ -43,8 +43,9 @@ export class LoginComponent implements OnInit {
     this._userService.signup(this.user_data).subscribe(
       result => {
 
-        this._userService.login(result.access_token);
         this._router.navigate(['/secure']);
+        localStorage.setItem('token', result.access_token);
+
   
       },
       error => {

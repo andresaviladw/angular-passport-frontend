@@ -10,6 +10,7 @@ export class UserService {
 
     public url: string;
     public url_auth: string;
+    public token:any;
 
     public loggedChanged = new Subject<boolean>();
 
@@ -38,9 +39,17 @@ export class UserService {
 
     //Save token 
     login(token: any): void {
-        localStorage.setItem('token', token);
-        this.loggedChanged.next(true);
         
+        this.loggedChanged.next(true);
+
+        return token
+        
+    }
+
+    getToken(){
+        this.token='Bearer '+localStorage.getItem('token');
+
+        return this.token
     }
 
     logout() {

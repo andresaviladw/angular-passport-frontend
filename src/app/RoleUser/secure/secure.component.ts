@@ -13,14 +13,14 @@ import { UserService } from '../../services/user.service';
 export class SecureComponent implements OnInit {
 
   public user: any;
-  private token: string;
+  private token: any;
   constructor(
     private _http: HttpClient,
     private _router: Router,
     private _userService: UserService
   ) {
 
-    this.token = 'Bearer ' + localStorage.getItem('token');
+    this.token = this._userService.getToken();
 
   }
 
